@@ -12,7 +12,6 @@ RSpec.describe Patient, type: :model do
 
     @doctor_patient1 = DoctorPatient.create!(doctor_id: @dr_bailey.id, patient_id: @sean.id)
     @doctor_patient2 = DoctorPatient.create!(doctor_id: @dr_bailey.id, patient_id: @john.id)
-  
   end
 
   describe "relationships" do
@@ -20,9 +19,4 @@ RSpec.describe Patient, type: :model do
     it { should have_many(:doctors).through(:doctor_patients)}
   end
 
-  describe "class methods" do
-    xit "" do
-
-    end
-  end
 end

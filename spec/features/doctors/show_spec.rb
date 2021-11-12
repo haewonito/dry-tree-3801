@@ -35,15 +35,9 @@ RSpec.describe "doctors show page", type: :feature do
 
     it "I see a button to remove that patient next to each patient's name and it works" do
       click_on "Remove Sean Morris"
-
+      
       expect(current_path).to eq("/doctors/#{@dr_bailey.id}")
       expect(page).to_not have_content("Sean Morris")
     end
   end
 end
-#
-# When I visit a Doctor's show page
-# Next to each patient's name, I see a button to remove that patient from that doctor's caseload
-# When I click that button for one patient
-# I'm brought back to the Doctor's show page
-# And I no longer see that patient's name listed
