@@ -11,7 +11,6 @@ RSpec.describe Doctor do
 
       @doctor_patient1 = DoctorPatient.create!(doctor_id: @dr_bailey.id, patient_id: @sean.id)
       @doctor_patient2 = DoctorPatient.create!(doctor_id: @dr_bailey.id, patient_id: @john.id)
-
     end
 
   describe 'relationships' do
@@ -23,11 +22,6 @@ RSpec.describe Doctor do
   describe "instance methods" do
     it "#find_hospital" do
       expect(@dr_bailey.find_hospital.name).to eq("Grey Sloan Memorial Hospital")
-    end
-
-    xit "#find_patients_name" do
-      expect(@dr_bailey.find_patients_name).to include("Sean Morris")
-      expect(@dr_bailey.find_patients_name).to include("John Jeon")
     end
   end
 end

@@ -22,12 +22,12 @@ RSpec.describe "doctors show page", type: :feature do
       expect(page).to have_content("General Surgery")
       expect(page).to have_content("Stanford University")
     end
-#find_hospital
+
     it "I see the hospital name where this doctor works" do
       expect(page).to have_content("#{@hospital.name}")
     end
 
-    xit "I see all the patients this doctor has" do
+    it "I see all the patients this doctor has" do
       expect(page).to have_content("Sean Morris")
       expect(page).to have_content("John Jeon")
       expect(page).to_not have_content("Haewon Jeon")

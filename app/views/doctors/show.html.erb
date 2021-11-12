@@ -2,3 +2,9 @@
 <h1>Specialty: <%= @doctor.specialty %></h1>
 <h1>Educated at: <%= @doctor.university %></h1>
 <h1>Affiliated Hospital: <%= @doctor.find_hospital.name %></h1>
+
+<h3>Affiliated Patients: </h3>
+
+<% @doctor.patients.each do |patient| %>
+  <%= patient.name %><br>
+<% end %>

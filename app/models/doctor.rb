@@ -7,7 +7,4 @@ class Doctor < ApplicationRecord
     Hospital.find(hospital_id)
   end
 
-  def find_patients_name
-    doctor_patients.
-  end
 end
